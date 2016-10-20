@@ -643,7 +643,7 @@ class BasicEntityPersister implements EntityPersister
             }
 
             if ($newVal !== null) {
-                $newValId = $uow->getEntityIdentifier($newVal);
+                $newValId = $uow->getOriginalEntityData($newVal);
             }
 
             $targetClass = $this->em->getClassMetadata($assoc['targetEntity']);
